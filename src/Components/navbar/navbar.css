@@ -1,0 +1,32 @@
+#invite-button {
+    border-radius: 30px;
+    padding: 10px;
+    background-color: transparent;
+    width: 150px;
+}
+
+#invite-button:hover {
+    border-color: #D4725A; /* Change the border color to gradient on hover */
+}
+
+
+.navbar-container .navbar-branding {
+    background: linear-gradient(to right, #D85D47, #D4725A);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    padding-left: 70px;
+    padding-right: 70px;
+    justify-content: space-between;
+}
+
