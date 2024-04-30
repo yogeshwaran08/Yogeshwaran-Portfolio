@@ -4,8 +4,11 @@ import Earth from "../../Components/Earth";
 import ParticlesComponent from "../../Components/Background/Particle";
 import HeroText from "../../Components/HeroText";
 import { Parallax, ParallaxProvider } from "react-scroll-parallax";
-import Moon from "../../assets/imgs/moon.png";
 import { motion } from "framer-motion";
+import Moon from "../../assets/imgs/moon.png";
+import astroid1 from "../../assets/imgs/astroid-type-1.png";
+import astroid2 from "../../assets/imgs/astroid-type-2.png";
+import astroid3 from "../../assets/imgs/astroid-type-3.png";
 
 function Hero() {
   return (
@@ -29,10 +32,10 @@ function Hero() {
       <motion.img
         src={Moon}
         alt="Moon Image"
-        className="moon-img"
+        className="floating-img moon"
         animate={{
-          y: [-20, 20, -20],
-          transition: { yoyo: Infinity, duration: 2 },
+          y: [-5, 5, -5],
+          transition: { yoyo: true, duration: 3, repeat: Infinity },
         }}
       />
     </div>

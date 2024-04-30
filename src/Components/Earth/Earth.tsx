@@ -10,7 +10,7 @@ Title: Earth
 import { useGLTF } from "@react-three/drei";
 
 export default function Earth(props: any) {
-  const { nodes, materials } = useGLTF("/earth.gltf");
+  const { nodes, materials } = useGLTF("/assets/ThreeD/Earth/earth.gltf");
   return (
     <group {...props} dispose={null}>
       <mesh
@@ -23,4 +23,4 @@ export default function Earth(props: any) {
   );
 }
 
-useGLTF.preload("/earth.gltf");
+useGLTF.preload("/assets/ThreeD/Earth/earth.gltf");

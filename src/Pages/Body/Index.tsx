@@ -1,5 +1,11 @@
 import React from "react";
 import "./body.css";
+import astroid1 from "../../assets/imgs/astroid-type-1.png";
+import astroid2 from "../../assets/imgs/astroid-type-2.png";
+import astroid3 from "../../assets/imgs/astroid-type-3.png";
+import jupyter from "../../assets/imgs/jupyter.png";
+import astronut from "../../assets/imgs/astronut.png";
+import { motion } from "framer-motion";
 
 const Body = () => {
   return (
@@ -13,7 +19,17 @@ const Body = () => {
       <div className="card card-2">
         <div className="glass"></div>
         <div className="frost"></div>
-        <div className="content">{/* Content of the card */}</div>
+        <div className="floating-img slanding-img jupyter-position">
+          <motion.img
+            src={jupyter}
+            alt="Astroid"
+            className="jupyter-img"
+            animate={{
+              y: [-5, 5, -5],
+              transition: { yoyo: true, duration: 3, repeat: Infinity },
+            }}
+          />
+        </div>
       </div>
 
       <div className="card card-3">
@@ -68,6 +84,18 @@ const Body = () => {
         <div className="glass"></div>
         <div className="frost"></div>
         <div className="content">{/* Content of the card */}</div>
+      </div>
+
+      <div className="floating-img slanding-img astronut-position">
+        <motion.img
+          src={astronut}
+          alt="Astroid"
+          className="astronut-img"
+          animate={{
+            y: [-5, 5, -5],
+            transition: { yoyo: true, duration: 3, repeat: Infinity },
+          }}
+        />
       </div>
     </div>
   );

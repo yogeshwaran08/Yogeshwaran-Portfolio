@@ -7,6 +7,7 @@
   padding-right: 8%;
   padding-bottom: 10%;
   padding-top: 10%;
+  position: relative;
 }
 
 .body-container .card-1 {
@@ -17,6 +18,7 @@
 .body-container .card-2 {
   grid-row: 1 / 3;
   grid-column: 2 / 3;
+  position: relative;
 }
 
 .body-container .card-6 {
@@ -63,13 +65,40 @@
   z-index: 1;
 }
 
-.content {
-  position: relative;
-  z-index: 2;
-  padding: 20px;
-  color: white;
-}
 
 .card:hover .glass {
   opacity: 1; /* Change opacity on hover */
+}
+
+.body-container .floating-img {
+  position: absolute;
+  z-index: 1;
+}
+
+.body-container .slanding-img {
+  transform: rotate(25deg); 
+}
+
+.body-container .astronut-img {
+  height: auto;
+  width: auto;
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.body-container .astronut-position {
+  top : 5%;
+  left: 0%;
+}
+
+.body-container .jupyter-img {
+  height: auto;
+  width: auto;
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.body-container .jupyter-position{
+  bottom: 0%;
+  right: -5%;
 }
