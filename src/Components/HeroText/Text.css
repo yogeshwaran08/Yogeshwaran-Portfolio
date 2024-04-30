@@ -12,6 +12,7 @@
 .Text-container .small-fnt {
     font-size: 1.5rem;
     font-weight: 600;
+    text-align: center;
     /* background: linear-gradient(to right, #BDB5DB, #C083C1, #B88497);
     -webkit-background-clip: text;
     background-clip: text;
@@ -21,6 +22,7 @@
 .Text-container .typewriter {
     font-size: 3rem;
     font-weight: 700;
+    text-align:  center;
     /* background: linear-gradient(to right, #BDB5DB, #C083C1, #B88497);
     -webkit-background-clip: text;
     background-clip: text;
@@ -29,8 +31,7 @@
 
 .Text-container .small-fnt,
 .Text-container .typewriter {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a black shadow */
-    /* Your existing styles */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     font-size: 1.5rem;
     font-weight: 600;
 }

@@ -1,5 +1,8 @@
 import { motion } from "framer-motion";
 import "./Footer.css";
+import InstagramIcon from "../../assets/icons/instagram";
+import TwitterIcon from "../../assets/icons/Twitter";
+import LinkedinIcon from "../../assets/icons/linkedin";
 
 const Footer = () => {
   return (
@@ -35,6 +38,11 @@ const Footer = () => {
         >
           <h5>Hire Me !</h5>
         </motion.div>
+      </div>
+      <div className="socials">
+        <InstagramIcon height={"20px"} />
+        <TwitterIcon height={"20px"} />
+        <LinkedinIcon height={"20px"} />
       </div>
     </div>
   );
