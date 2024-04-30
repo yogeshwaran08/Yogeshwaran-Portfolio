@@ -6,9 +6,6 @@ import HeroText from "../../Components/HeroText";
 import { Parallax, ParallaxProvider } from "react-scroll-parallax";
 import { motion } from "framer-motion";
 import Moon from "../../assets/imgs/moon.png";
-import astroid1 from "../../assets/imgs/astroid-type-1.png";
-import astroid2 from "../../assets/imgs/astroid-type-2.png";
-import astroid3 from "../../assets/imgs/astroid-type-3.png";
 
 function Hero() {
   return (

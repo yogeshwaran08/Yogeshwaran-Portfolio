@@ -1,4 +1,3 @@
-import React from "react";
 import "./navbar.css";
 import Marquee from "react-fast-marquee";
 import { motion } from "framer-motion";

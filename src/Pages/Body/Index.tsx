@@ -1,8 +1,4 @@
-import React from "react";
 import "./body.css";
-import astroid1 from "../../assets/imgs/astroid-type-1.png";
-import astroid2 from "../../assets/imgs/astroid-type-2.png";
-import astroid3 from "../../assets/imgs/astroid-type-3.png";
 import jupyter from "../../assets/imgs/jupyter.png";
 import astronut from "../../assets/imgs/astronut.png";
 import { motion } from "framer-motion";
