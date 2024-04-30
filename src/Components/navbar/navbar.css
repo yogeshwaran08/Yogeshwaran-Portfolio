@@ -3,12 +3,14 @@
     padding: 10px;
     background-color: transparent;
     width: 150px;
+    color: white;
+    font-family: "Josefin Sans", sans-serif;
+    border-color: white;
 }
 
 #invite-button:hover {
     border-color: #D4725A; /* Change the border color to gradient on hover */
 }
-
 
 .navbar-container .navbar-branding {
     background: linear-gradient(to right, #D85D47, #D4725A);
@@ -18,6 +20,7 @@
     font-size: 1.2rem;
     margin: 0;
     padding: 0;
+    color: #fff;
 }
 
 .navbar-container {
@@ -28,5 +31,7 @@
     padding-left: 70px;
     padding-right: 70px;
     justify-content: space-between;
+    position: relative;
+    z-index: 10;
+    max-height: 35px;
 }
-

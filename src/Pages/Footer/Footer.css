@@ -1,0 +1,46 @@
+.footer-container{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    z-index: 50;
+    background-color: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-container .main-content { 
+    display: flex;
+    gap: 50px;
+    height: 30%;
+    width: max-content;
+}
+
+.footer-container .main-content .connect-text {
+    color: #000;
+    align-self: center;
+    white-space: nowrap;
+}
+
+.footer-container .main-content .hr {
+    border-width: 0.5px;
+    border-style: solid;
+    border-color: #302f2f;
+    background-color: #262323; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow */ 
+}
+
+.footer-container .main-content .hire-btn {
+    background-color: black;
+    align-self: center;
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}

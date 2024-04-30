@@ -1,0 +1,41 @@
+.Text-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color :white;
+    flex-direction: column;
+    gap: 25px;
+    position: relative;
+    z-index: 2;
+}
+
+.Text-container .small-fnt {
+    font-size: 1.5rem;
+    font-weight: 600;
+    /* background: linear-gradient(to right, #BDB5DB, #C083C1, #B88497);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; */
+}
+
+.Text-container .typewriter {
+    font-size: 3rem;
+    font-weight: 700;
+    /* background: linear-gradient(to right, #BDB5DB, #C083C1, #B88497);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; */
+}
+
+.Text-container .small-fnt,
+.Text-container .typewriter {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a black shadow */
+    /* Your existing styles */
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.Text-container .typewriter {
+    font-size: 3rem;
+    font-weight: 700;
+}
