@@ -27,3 +27,13 @@
   transform: translate(-50%, -50%);
   z-index: 100;
 }
+
+.hero-container .moon-img {
+  max-width: 150px;
+  max-height: 150px;
+  height: auto;
+  width: auto;
+  position: absolute;
+  top: 35%;
+  right: 20%;
+}
