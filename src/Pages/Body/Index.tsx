@@ -1,3 +1,5 @@
+import Lottie from "lottie-react";
+import SchoolAnimation from "../../assets/animation/school-animation.json";
 import "./body.css";
 import jupyter from "../../assets/imgs/jupyter.png";
 import astronut from "../../assets/imgs/astronut.png";
@@ -14,7 +16,21 @@ const Body = () => {
       <div className="card card-1">
         <div className="glass"></div>
         <div className="frost"></div>
-        <div className="content">{/* Content of the card */}</div>
+        <div className="content-vertical">
+          <Lottie
+            animationData={SchoolAnimation}
+            loop={true}
+            className="grid-1-animation"
+          />
+          <span>
+            <h3 style={{ color: "white" }}>School education</h3>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s,
+            </p>
+          </span>
+        </div>
       </div>
 
       <div className="card card-2">
@@ -25,7 +41,7 @@ const Body = () => {
       <div className="card card-3">
         <div className="glass"></div>
         <div className="frost"></div>
-        <div className="content">{/* Content of the card */}</div>
+        <div className="content"></div>
       </div>
 
       <div className="card card-4">
