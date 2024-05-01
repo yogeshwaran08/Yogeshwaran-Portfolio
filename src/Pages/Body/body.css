@@ -75,8 +75,12 @@
   z-index: 1;
 }
 
-.body-container .slanding-img {
+.body-container .right-slanding-img {
   transform: rotate(25deg); 
+}
+
+.body-container .left-slanding-img {
+  transform: rotate(-25deg); 
 }
 
 .body-container .astronut-img {
@@ -87,8 +91,24 @@
 }
 
 .body-container .astronut-position {
-  top : 5%;
-  left: 0%;
+  top : 7%;
+  left: -2%;
+}
+
+.body-container .rocket-img {
+  height: auto;
+  width: auto;
+  max-width: 400px;
+  max-height: 400px;
+}
+
+.body-container .rocket-position {
+  top : 3%;
+  right: -7%;
+}
+
+.body-container .rocket-slanding-img {
+  transform: rotate(-40deg); 
 }
 
 .body-container .jupyter-img {
@@ -99,6 +119,66 @@
 }
 
 .body-container .jupyter-position{
+  top : 35%;
+  right: 0%;
+}
+
+.body-container .saturn-img {
+  height: auto;
+  width: auto;
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.body-container .saturn-position {
+  top: 50%;
+  left : -2%;
+}
+
+.body-container .mars-img {
+  height: auto;
+  width: auto;
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.body-container .mars-position {
+  top: 65%;
+  right : -2%;
+}
+
+.body-container .astroid1-img {
+  height: auto;
+  width: auto;
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.body-container .astroid1-position {
   bottom: 0%;
-  right: -5%;
+  left : -2%;
+}
+
+.body-container .astroid2-img {
+  height: auto;
+  width: auto;
+  max-width: 150px;
+  max-height: 150px;
+}
+
+.body-container .astroid2-position {
+  bottom: -5%;
+  right : -2%;
+}
+
+.body-container .astroid-sub1-img {
+  height: auto;
+  width: auto;
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.body-container .astroid-sub1-position {
+  top : 15%;
+  left: -2%;
 }

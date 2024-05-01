@@ -45,6 +45,13 @@
     transition: background-color 0.3s ease;
 }
 
+.footer-container .main-content .connect {
+    position:  relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .footer-container .socials {
     display: flex;
     flex-direction: row;
