@@ -1,37 +1,40 @@
 #invite-button {
-    border-radius: 30px;
-    padding: 10px;
-    background-color: transparent;
-    width: 150px;
-    color: white;
-    font-family: "Josefin Sans", sans-serif;
-    border-color: white;
+  border-radius: 30px;
+  padding: 10px;
+  background-color: transparent;
+  width: 150px;
+  color: white;
+  font-family: "Josefin Sans", sans-serif;
+  border-color: white;
+  border-width: 1px;
+  border-style: solid;
+  text-decoration: none;
 }
 
 #invite-button:hover {
-    border-color: #D4725A; /* Change the border color to gradient on hover */
+  border-color: #d4725a; /* Change the border color to gradient on hover */
 }
 
 .navbar-container .navbar-branding {
-    background: linear-gradient(to right, #D85D47, #D4725A);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 1.2rem;
-    margin: 0;
-    padding: 0;
-    color: #fff;
+  background: linear-gradient(to right, #d85d47, #d4725a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 0;
+  color: #fff;
 }
 
 .navbar-container {
-    display: flex;
-    align-items: center;
-    padding-top: 40px;
-    padding-bottom: 20px;
-    padding-left: 70px;
-    padding-right: 70px;
-    justify-content: space-between;
-    position: relative;
-    z-index: 10;
-    max-height: 35px;
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  padding-left: 70px;
+  padding-right: 70px;
+  justify-content: space-between;
+  position: relative;
+  z-index: 10;
+  max-height: 35px;
 }

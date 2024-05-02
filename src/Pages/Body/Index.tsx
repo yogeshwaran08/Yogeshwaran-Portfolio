@@ -20,7 +20,12 @@ import { motion } from "framer-motion";
 const Body = () => {
   return (
     <div className="body-container">
-      <div className="card card-1">
+      <motion.div
+        className="card card-1"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1, transition: { duration: 0.5 } }}
+        whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
+      >
         <div className="glass"></div>
         <div className="frost"></div>
         <div className="vertical-content">
@@ -38,9 +43,14 @@ const Body = () => {
             </p>
           </div>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="card card-2">
+      <motion.div
+        className="card card-2"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1, transition: { duration: 0.5 } }}
+        whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
+      >
         <div className="glass"></div>
         <div className="frost"></div>
         <div className="vertical-content">
@@ -58,9 +68,14 @@ const Body = () => {
             </p>
           </div>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="card card-3">
+      <motion.div
+        className="card card-3"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1, transition: { duration: 0.5 } }}
+        whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
+      >
         <div className="glass"></div>
         <div className="frost"></div>
         <div className="horizontal-content">
@@ -78,9 +93,14 @@ const Body = () => {
             </p>
           </div>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="card card-4">
+      <motion.div
+        className="card card-4"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1, transition: { duration: 0.5 } }}
+        whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
+      >
         <div className="glass"></div>
         <div className="frost"></div>
         <div className="horizontal-content">
@@ -98,9 +118,14 @@ const Body = () => {
             </p>
           </div>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="card card-5">
+      <motion.div
+        className="card card-5"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1, transition: { duration: 0.5 } }}
+        whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
+      >
         <div className="glass"></div>
         <div className="frost"></div>
         <div className="horizontal-content">
@@ -118,9 +143,14 @@ const Body = () => {
             </p>
           </div>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="card card-6">
+      <motion.div
+        className="card card-6"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1, transition: { duration: 0.5 } }}
+        whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
+      >
         <div className="glass"></div>
         <div className="frost"></div>
         <div className="vertical-content">
@@ -138,9 +168,14 @@ const Body = () => {
             </p>
           </div>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="card card-7">
+      <motion.div
+        className="card card-7"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1, transition: { duration: 0.5 } }}
+        whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
+      >
         <div className="glass"></div>
         <div className="frost"></div>
         <div className="vertical-content">
@@ -158,9 +193,14 @@ const Body = () => {
             </p>
           </div>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="card card-8">
+      <motion.div
+        className="card card-8"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1, transition: { duration: 0.5 } }}
+        whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
+      >
         <div className="glass"></div>
         <div className="frost"></div>
         <div className="horizontal-content">
@@ -178,7 +218,7 @@ const Body = () => {
             </p>
           </div>
         </div>
-      </div>
+      </motion.div>
       <div className="floating-img right-slanding-img astronut-position">
         <motion.img
           src={astronut}
