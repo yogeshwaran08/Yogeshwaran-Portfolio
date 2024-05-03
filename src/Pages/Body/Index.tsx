@@ -135,7 +135,7 @@ const Body = () => {
             className="grid-3-animation"
           />
           <div>
-            <h3>Design Principals</h3>
+            <h3>Design Principles</h3>
             <p>
               I understand design principles well, enabling me to create
               visually striking and effective designs by incorporating balance,
