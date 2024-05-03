@@ -85,7 +85,7 @@
   color: white;
   line-height: 20px;
   height: 90%;
-  text-align: justify;
+  text-align: left;
 }
 
 .body-container .card .horizontal-content {
@@ -98,7 +98,7 @@
   line-height: 20px;
   padding: 20px;
   gap: 20px;
-  text-align: justify;
+  text-align: left;
 }
 
 .card:hover .glass {
