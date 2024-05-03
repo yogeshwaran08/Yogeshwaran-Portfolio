@@ -37,9 +37,10 @@ const Body = () => {
           <div>
             <h3>School education</h3>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s,
+              I attended Christ King Girls Higher Secondary School, where I
+              pursued studies in the Mathematics-Biology group. I am
+              enthusiastic about this academic path. I successfully achieved an
+              87% score in my 12th-grade examinations.
             </p>
           </div>
         </div>
@@ -62,9 +63,10 @@ const Body = () => {
           <div>
             <h3>College Education</h3>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s,
+              I pursued my Bachelor of Science in Computer Science at Bharath
+              University, where I attained a remarkable CGPA of 9 out of 10.
+              This achievement reflects my dedication and commitment to academic
+              excellence.
             </p>
           </div>
         </div>
@@ -87,9 +89,8 @@ const Body = () => {
           <div>
             <h3>Adobe Illustrator</h3>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s,
+              I excel in utilizing Adobe Illustrator, demonstrating a
+              comprehensive understanding of its functionalities and tools.
             </p>
           </div>
         </div>
@@ -112,9 +113,8 @@ const Body = () => {
           <div>
             <h3>Figma</h3>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s,
+              I am proficient in utilizing Figma, demonstrating a solid
+              understanding of its interface and collaborative features.
             </p>
           </div>
         </div>
@@ -137,9 +137,9 @@ const Body = () => {
           <div>
             <h3>Design Principals</h3>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s,
+              I understand design principles well, enabling me to create
+              visually striking and effective designs by incorporating balance,
+              hierarchy, and contrast.
             </p>
           </div>
         </div>
@@ -162,9 +162,9 @@ const Body = () => {
           <div>
             <h3>Web designing</h3>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s,
+              I excel in web design, adeptly creating visually appealing and
+              user-friendly websites with a focus on responsive design and UX/UI
+              principles.
             </p>
           </div>
         </div>
@@ -187,9 +187,8 @@ const Body = () => {
           <div>
             <h3>Mobile Design</h3>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s,
+              I specialize in mobile design, creating intuitive and visually
+              appealing user interfaces for iOS and Android platforms.
             </p>
           </div>
         </div>
@@ -212,9 +211,9 @@ const Body = () => {
           <div>
             <h3>Innovative thinker</h3>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s,
+              I am an innovative thinker, consistently generating creative
+              solutions and pushing boundaries to achieve unique and impactful
+              results.
             </p>
           </div>
         </div>
