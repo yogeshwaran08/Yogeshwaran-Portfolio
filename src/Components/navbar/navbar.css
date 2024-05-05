@@ -38,3 +38,19 @@
   z-index: 10;
   max-height: 35px;
 }
+
+.navbar-container .nav-btns {
+  display: flex;
+  gap: 20px;
+}
+
+#download-resume-btn {
+  background: linear-gradient(45deg, rgba(0, 0, 64, 1), rgba(74, 0, 128, 0.8));
+  border-radius: 10px;
+  text-decoration: none;
+  color: #fff;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
