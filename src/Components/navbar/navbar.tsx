@@ -6,17 +6,8 @@ import { motion } from "framer-motion";
 function NavBar() {
   return (
     <div className="navbar-container">
-      <h1 className="navbar-branding">Lydia</h1>
+      <h1 className="navbar-branding">Yogeshwaran</h1>
       <div className="nav-btns">
-        <motion.a
-          id="download-resume-btn"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.9 }}
-          href="https://drive.google.com/file/d/1LOO1X-9ZPdH82E4OucgsENRTvijg3DjZ/view?usp=sharing"
-          target="_blank"
-        >
-          Download resume
-        </motion.a>
         <motion.a
           id="invite-button"
           whileHover={{ scale: 1.05 }}

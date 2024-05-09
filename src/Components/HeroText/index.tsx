@@ -33,7 +33,7 @@ const HeroText = () => {
         animate="visible"
         custom={0.3}
       >
-        Hello, I am Lydia
+        Hello, I am Yogeshwaran
       </motion.span>
       <motion.span
         className="typewriter"
@@ -44,7 +44,7 @@ const HeroText = () => {
       >
         <Typewriter
           options={{
-            strings: ["UI Designer", "Logo designer"],
+            strings: ["App developer", "Web developer", "Ethical Hacker"],
             autoStart: startTyping,
             loop: true,
             deleteSpeed: 110,
