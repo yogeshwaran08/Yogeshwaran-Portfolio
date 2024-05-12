@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import "./Footer.css";
 import InstagramIcon from "../../assets/icons/instagram";
-import TwitterIcon from "../../assets/icons/Twitter";
 import LinkedinIcon from "../../assets/icons/linkedin";
 import EmailIcon from "../../assets/icons/Email";
 import GithubIcon from "../../assets/icons/Github";

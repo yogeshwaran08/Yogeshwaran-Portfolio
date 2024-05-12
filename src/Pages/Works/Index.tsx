@@ -13,6 +13,7 @@ const Work = () => (
           link={content.link}
           duration={content.duration}
           tech={content.tech}
+          key={index}
         />
       ))}
     </div>

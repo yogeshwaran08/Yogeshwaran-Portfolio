@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import Lottie from "lottie-react";
 import "./VCard.css";
 import React from "react";
