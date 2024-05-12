@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Body from "./Pages/Body/Index";
 import Footer from "./Pages/Footer";
 import Hero from "./Pages/Hero/Hero";
+import Work from "./Pages/Works/Index";
 
 function App() {
   useEffect(() => {

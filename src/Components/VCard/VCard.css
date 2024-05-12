@@ -1,0 +1,54 @@
+.Vcard {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  height: 100%;
+  width: 100%;
+}
+
+.Vcard .card-content {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  flex-direction: column;
+  height: 100%;
+}
+.Vcard .animation {
+  width: 30%;
+}
+
+.Vcard .content {
+  text-align: justify;
+  line-height: 1.3em;
+}
+
+.Vcard .glass {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    rgba(0, 0, 64, 0.7),
+    rgba(74, 0, 128, 0.7)
+  );
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  opacity: 0.9;
+  z-index: -1;
+}
+
+.Vcard .frost {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1); /* Frosty overlay */
+  z-index: 0;
+}

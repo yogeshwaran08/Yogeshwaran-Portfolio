@@ -1,571 +1,192 @@
-import Lottie from "lottie-react";
-import SchoolAnimation from "../../assets/animation/school-animation.json";
-import Graduation from "../../assets/animation/graduation.json";
-import Hello from "../../assets/animation/hello.json";
-import Bulb from "../../assets/animation/bulb.json";
-import AppDev from "../../assets/animation/Appdev.json";
-import ReactAnim from "../../assets/animation/react.json";
-import Python from "../../assets/animation/python.json";
-import WebDev from "../../assets/animation/WebDev.json";
-import Firebase from "../../assets/animation/firebase.json";
-import javascript from "../../assets/animation/javascript.json";
-import hacker from "../../assets/animation/hacker.json";
-import html from "../../assets/animation/html.json";
-import Css from "../../assets/animation/css.json";
-import MongoDB from "../../assets/animation/monogo.json";
-import tensorflow from "../../assets/animation/tensorflow.json";
-import Figma from "../../assets/animation/figma.json";
 import "./body.css";
-import jupyter from "../../assets/imgs/jupyter.png";
-import astronut from "../../assets/imgs/astronut.png";
-import saturn from "../../assets/imgs/saturn.png";
-import mars from "../../assets/imgs/mars.png";
-import astroid1 from "../../assets/imgs/astroid-type-1.png";
-import astroid2 from "../../assets/imgs/astroid-type-2.png";
-import rocket from "../../assets/imgs/rocket.png";
-import { motion } from "framer-motion";
+import HCard from "../../Components/HCard";
+import VCard from "../../Components/VCard";
+//animation
+import Me from "../../assets/animation/hello.json";
+import Bulb from "../../assets/animation/bulb.json";
+import School from "../../assets/animation/school-animation.json";
+import Graduation from "../../assets/animation/graduation.json";
+import Python from "../../assets/animation/python.json";
+import javascript from "../../assets/animation/javascript.json";
+import tensorflow from "../../assets/animation/tensorflow.json";
+import MongoDB from "../../assets/animation/monogo.json";
+import AppDev from "../../assets/animation/Appdev.json";
+import Figma from "../../assets/animation/figma.json";
+import Hacker from "../../assets/animation/hacker.json";
+import Firebase from "../../assets/animation/firebase.json";
+import Css from "../../assets/animation/css.json";
+import ReactAnim from "../../assets/animation/react.json";
+import DSA from "../../assets/animation/data structure.json";
+import Html from "../../assets/animation/html.json";
+import UIUX from "../../assets/animation/UIUX_design.json";
+import ReactNative from "../../assets/animation/react native.json";
 
 const Body = () => {
   return (
     <div className="body-container">
-      <motion.div
-        className="card card-1"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1, transition: { duration: 0.5 } }}
-        whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
-      >
-        <div className="glass"></div>
-        <div className="frost"></div>
-        <div className="vertical-content">
-          <Lottie
-            animationData={SchoolAnimation}
-            loop={true}
-            className="grid-1-animation"
-          />
-          <div>
-            <h3>School education</h3>
-            <p>
-              I studied my school education at Sri VDS Jain Higher Secondary
-              School, where I dedicated myself to academic excellence. Upon
-              completing my higher secondary education, I achieved a commendable
-              score of 89.16%.
-            </p>
-          </div>
-        </div>
-      </motion.div>
-
-      <motion.div
-        className="card card-2"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1, transition: { duration: 0.5 } }}
-        whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
-      >
-        <div className="glass"></div>
-        <div className="frost"></div>
-        <div className="vertical-content">
-          <Lottie
-            animationData={Graduation}
-            loop={true}
-            className="grid-1-animation"
-          />
-          <div>
-            <h3>College Education</h3>
-            <p>
-              I pursued my Bachelor of Science in Computer Science at Bharath
-              University, where I attained a remarkable CGPA of 9 out of 10.
-              This achievement reflects my dedication and commitment to academic
-              excellence.
-            </p>
-          </div>
-        </div>
-      </motion.div>
-
-      <motion.div
-        className="card card-3"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1, transition: { duration: 0.5 } }}
-        whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
-      >
-        <div className="glass"></div>
-        <div className="frost"></div>
-        <div className="horizontal-content">
-          <Lottie
-            animationData={Hello}
-            loop={true}
-            className="grid-3-animation"
-          />
-          <div>
-            <h3>About me</h3>
-            <p>
-              I excel in utilizing Adobe Illustrator, demonstrating a
-              comprehensive understanding of its functionalities and tools.
-            </p>
-          </div>
-        </div>
-      </motion.div>
-
-      <motion.div
-        className="card card-4"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1, transition: { duration: 0.5 } }}
-        whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
-      >
-        <div className="glass"></div>
-        <div className="frost"></div>
-        <div className="horizontal-content">
-          <Lottie
-            animationData={Bulb}
-            loop={true}
-            className="grid-3-animation"
-          />
-          <div>
-            <h3>Idealogy</h3>
-            <p>
-              I am proficient in utilizing Figma, demonstrating a solid
-              understanding of its interface and collaborative features.
-            </p>
-          </div>
-        </div>
-      </motion.div>
-
-      <motion.div
-        className="card card-5"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1, transition: { duration: 0.5 } }}
-        whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
-      >
-        <div className="glass"></div>
-        <div className="frost"></div>
-        <div className="horizontal-content">
-          <Lottie
-            animationData={AppDev}
-            loop={true}
-            className="grid-3-animation"
-          />
-          <div>
-            <h3>App Developer</h3>
-            <p>
-              I understand design principles well, enabling me to create
-              visually striking and effective designs by incorporating balance,
-              hierarchy, and contrast.
-            </p>
-          </div>
-        </div>
-      </motion.div>
-
-      <motion.div
-        className="card card-6"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1, transition: { duration: 0.5 } }}
-        whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
-      >
-        <div className="glass"></div>
-        <div className="frost"></div>
-        <div className="vertical-content">
-          <Lottie
-            animationData={ReactAnim}
-            loop={true}
-            className="grid-1-animation"
-          />
-          <div>
-            <h3>React</h3>
-            <p>
-              I excel in web design, adeptly creating visually appealing and
-              user-friendly websites with a focus on responsive design and UX/UI
-              principles.
-            </p>
-          </div>
-        </div>
-      </motion.div>
-
-      <motion.div
-        className="card card-7"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1, transition: { duration: 0.5 } }}
-        whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
-      >
-        <div className="glass"></div>
-        <div className="frost"></div>
-        <div className="vertical-content">
-          <Lottie
-            animationData={Python}
-            loop={true}
-            className="grid-1-animation"
-          />
-          <div>
-            <h3>Mobile Design</h3>
-            <p>
-              I specialize in mobile design, creating intuitive and visually
-              appealing user interfaces for iOS and Android platforms.
-            </p>
-          </div>
-        </div>
-      </motion.div>
-
-      <motion.div
-        className="card card-8"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1, transition: { duration: 0.5 } }}
-        whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
-      >
-        <div className="glass"></div>
-        <div className="frost"></div>
-        <div className="horizontal-content">
-          <Lottie
-            animationData={WebDev}
-            loop={true}
-            className="grid-3-animation"
-          />
-          <div>
-            <h3>Innovative thinker</h3>
-            <p>
-              I am an innovative thinker, consistently generating creative
-              solutions and pushing boundaries to achieve unique and impactful
-              results.
-            </p>
-          </div>
-        </div>
-      </motion.div>
-
-      <motion.div
-        className="card card-9"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1, transition: { duration: 0.5 } }}
-        whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
-      >
-        <div className="glass"></div>
-        <div className="frost"></div>
-        <div className="vertical-content">
-          <Lottie
-            animationData={hacker}
-            loop={true}
-            className="grid-1-animation"
-          />
-          <div>
-            <h3>Card 9</h3>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s
-            </p>
-          </div>
-        </div>
-      </motion.div>
-
-      <motion.div
-        className="card card-10"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1, transition: { duration: 0.5 } }}
-        whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
-      >
-        <div className="glass"></div>
-        <div className="frost"></div>
-        <div className="horizontal-content">
-          <Lottie
-            animationData={html}
-            loop={true}
-            className="grid-3-animation"
-          />
-          <div>
-            <h3>Card 10</h3>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s
-            </p>
-          </div>
-        </div>
-      </motion.div>
-
-      <motion.div
-        className="card card-11"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1, transition: { duration: 0.5 } }}
-        whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
-      >
-        <div className="glass"></div>
-        <div className="frost"></div>
-        <div className="horizontal-content">
-          <Lottie
-            animationData={Css}
-            loop={true}
-            className="grid-3-animation"
-          />
-          <div>
-            <h3>Card 11</h3>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s
-            </p>
-          </div>
-        </div>
-      </motion.div>
-
-      <motion.div
-        className="card card-12"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1, transition: { duration: 0.5 } }}
-        whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
-      >
-        <div className="glass"></div>
-        <div className="frost"></div>
-        <div className="vertical-content">
-          <Lottie
-            animationData={javascript}
-            loop={true}
-            className="grid-1-animation"
-          />
-          <div>
-            <h3>Card 12</h3>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s
-            </p>
-          </div>
-        </div>
-      </motion.div>
-
-      <motion.div
-        className="card card-13"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1, transition: { duration: 0.5 } }}
-        whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
-      >
-        <div className="glass"></div>
-        <div className="frost"></div>
-        <div className="horizontal-content">
-          <Lottie
-            animationData={Firebase}
-            loop={true}
-            className="grid-3-animation"
-          />
-          <div>
-            <h3>Car 13</h3>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s
-            </p>
-          </div>
-        </div>
-      </motion.div>
-
-      <motion.div
-        className="card card-14"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1, transition: { duration: 0.5 } }}
-        whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
-      >
-        <div className="glass"></div>
-        <div className="frost"></div>
-        <div className="vertical-content">
-          <Lottie
-            animationData={tensorflow}
-            loop={true}
-            className="grid-1-animation"
-          />
-          <div>
-            <h3>Car 14</h3>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s
-            </p>
-          </div>
-        </div>
-      </motion.div>
-
-      <motion.div
-        className="card card-15"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1, transition: { duration: 0.5 } }}
-        whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
-      >
-        <div className="glass"></div>
-        <div className="frost"></div>
-        <div className="horizontal-content">
-          <Lottie
-            animationData={MongoDB}
-            loop={true}
-            className="grid-3-animation"
-          />
-          <div>
-            <h3>Card 15</h3>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s
-            </p>
-          </div>
-        </div>
-      </motion.div>
-
-      <motion.div
-        className="card card-16"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1, transition: { duration: 0.5 } }}
-        whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
-      >
-        <div className="glass"></div>
-        <div className="frost"></div>
-        <div className="horizontal-content">
-          <Lottie
-            animationData={Figma}
-            loop={true}
-            className="grid-3-animation"
-          />
-          <div>
-            <h3>Card 16</h3>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s
-            </p>
-          </div>
-        </div>
-      </motion.div>
-
-      <motion.div
-        className="card card-17"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1, transition: { duration: 0.5 } }}
-        whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
-      >
-        <div className="glass"></div>
-        <div className="frost"></div>
-        <div className="horizontal-content">
-          <Lottie
-            animationData={MongoDB}
-            loop={true}
-            className="grid-3-animation"
-          />
-          <div>
-            <h3>Card 17</h3>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s
-            </p>
-          </div>
-        </div>
-      </motion.div>
-
-      <div className="floating-img right-slanding-img astronut-position">
-        <motion.img
-          src={astronut}
-          alt="Astroid"
-          className="astronut-img"
-          initial={{ translateX: -100 }}
-          whileInView={{ translateX: 0, transition: { duration: 2 } }}
-          animate={{
-            y: [-5, 5, -5],
-            transition: { yoyo: true, duration: 3, repeat: Infinity },
-          }}
-        />
-      </div>
-
-      <div className="floating-img rocket-slanding-img rocket-position">
-        <motion.img
-          src={rocket}
-          alt="Rcoket"
-          className="rocket-img"
-          initial={{ translateX: 10, translateY: 200 }}
-          whileInView={{
-            translateX: 0,
-            translateY: 0,
-            transition: { duration: 1.5 },
-          }}
-          animate={{
-            y: [-5, 5, -5],
-            transition: { yoyo: true, duration: 3, repeat: Infinity },
-          }}
-        />
-      </div>
-
-      <div className="floating-img right-slanding-img astroid-sub1-position">
-        <motion.img
-          src={astroid1}
-          alt="Astroid"
-          className="astroid-sub1-img"
-          animate={{
-            y: [-5, 5, -5],
-            x: [-5, 5, -5],
-            transition: { yoyo: true, duration: 3, repeat: Infinity },
-          }}
-        />
-      </div>
-
-      <div className="floating-img left-slanding-img jupyter-position">
-        <motion.img
-          src={jupyter}
-          alt="Astroid"
-          className="jupyter-img"
-          initial={{ translateX: 100 }}
-          whileInView={{ translateX: 0, transition: { duration: 2 } }}
-          animate={{
-            y: [-5, 5, -5],
-            transition: { yoyo: true, duration: 3, repeat: Infinity },
-          }}
-        />
-      </div>
-
-      <div className="floating-img right-slanding-img saturn-position">
-        <motion.img
-          src={saturn}
-          alt="Saturn"
-          className="saturn-img"
-          initial={{ translateX: -100 }}
-          whileInView={{ translateX: 0, transition: { duration: 2 } }}
-          animate={{
-            y: [-5, 5, -5],
-            transition: { yoyo: true, duration: 3, repeat: Infinity },
-          }}
-        />
-      </div>
-
-      <div className="floating-img left-slanding-img mars-position">
-        <motion.img
-          src={mars}
-          alt="Mars"
-          className="mars-img"
-          initial={{ translateX: 50 }}
-          whileInView={{ translateX: 0, transition: { duration: 2 } }}
-          animate={{
-            y: [-5, 5, -5],
-            transition: { yoyo: true, duration: 3, repeat: Infinity },
-          }}
-        />
-      </div>
-
-      <div className="floating-img left-slanding-img astroid1-position">
-        <motion.img
-          src={astroid1}
-          alt="Astroid"
-          className="astroid1-img"
-          initial={{ translateX: -70 }}
-          whileInView={{ translateX: 0, transition: { duration: 2 } }}
-          animate={{
-            y: [-5, 5, -5],
-            transition: { yoyo: true, duration: 3, repeat: Infinity },
-          }}
-        />
-      </div>
-
-      <div className="floating-img left-slanding-img astroid2-position">
-        <motion.img
-          src={astroid2}
-          alt="Astroid"
-          className="astroid2-img"
-          initial={{ translateY: 70 }}
-          whileInView={{ translateY: 0, transition: { duration: 2 } }}
-          animate={{
-            y: [-5, 5, -5],
-            transition: { yoyo: true, duration: 3, repeat: Infinity },
-          }}
-        />
-      </div>
+      <VCard
+        title="About me"
+        content="Hello, I am yogeshwaran, tech enthusiast, I love programming
+        my deep passion in exploring technology makes me to stay updated in emerging technology."
+        className="card-1"
+        animation={Me}
+        animationWidth="80%"
+      />
+      <VCard
+        title="My Motto"
+        content="
+            As a technology explorer, I love Programming and
+            Penetrating a software. I am very concerned about
+            user privacy in internet. ' Make a secure software '"
+        className="card-2"
+        animation={Bulb}
+        animationWidth="30%"
+      />
+      <HCard
+        title="School"
+        content="
+            I completed my schooing in Sri VDS Jain Higher 
+            Secondary School, Tiruvannamalai, Tamil Nadu, India 
+            and passed out with 89%"
+        className="card-3"
+        animation={School}
+        animationWidth="100%"
+      />
+      <HCard
+        title="College"
+        content="
+            I completed my BSC Computer Science Degree at 
+            Bharath Institute of Higher Education and Research and
+            passed out with 9.5 out of 10 CGPA"
+        className="card-4"
+        animation={Graduation}
+      />
+      <HCard
+        title="Python"
+        content="
+            Python is my second language I learnt. From the
+            time I learnt it become my favorite programming language.
+            I developed many programs in python."
+        className="card-5"
+        animation={Python}
+        animationWidth="90%"
+      />
+      <HCard
+        title="Javascript"
+        content="
+            Following Python I learn Javascript and developer
+            many websites using it. If I should rate my skill
+            in javascript I will rate it as 8 out of 10."
+        className="card-6"
+        animation={javascript}
+        animationWidth="100%"
+      />
+      <VCard
+        title="Tensorflow"
+        content="
+            I am very interested in developing a deep learning model. I enjoy building a AI model
+            That could predict. It feels like a Wizard🧙‍♂️
+            "
+        className="card-7"
+        animation={tensorflow}
+        animationWidth="40%"
+      />
+      <HCard
+        title="Mongo DB"
+        content="
+            Confused with building tables in SQL? Here is NoSQL MongoDB. A very interesting 
+            and Easy to use Database."
+        className="card-8"
+        animation={MongoDB}
+        animationWidth="90%"
+      />
+      <HCard
+        title="App developer"
+        content="
+          I am able to develop android and IOS apps using React native backend with firebase
+          or a custom backend written with backend language like node.js or Python
+          "
+        className="card-9"
+        animation={AppDev}
+      />
+      <HCard
+        title="Figma"
+        content="
+            Designs Designs Designs. I don't like it. I avoid But designs like me
+            I can't avoid. LOL. I do design Web and App"
+        className="card-10"
+        animation={Figma}
+        animationWidth="100%"
+      />
+      <VCard
+        title="Hacker"
+        content="
+            I love hacking softwares, I primarily focused on web 
+            penetration testing, reverse engineering and privilege escalation. I have
+            earned GOD title in tryhackme."
+        className="card-11"
+        animation={Hacker}
+        animationWidth="50%"
+      />
+      <HCard
+        title="Firebase"
+        content="
+            Google's Backend very easy to use, that could reduce so much of work
+            in backend. I have made many projects using firebase."
+        className="card-12"
+        animation={Firebase}
+      />
+      <HCard
+        title="CSS"
+        content="
+              This makes website more styled and attractive. The world without 
+              Css will be ugly. I am a expert in Css"
+        className="card-14"
+        animation={Css}
+      />
+      <HCard
+        title="HTML"
+        content="
+            Basic back bone of a website. I am a expert in Html"
+        className="card-14"
+        animation={Html}
+        animationWidth="90%"
+      />
+      <VCard
+        title="React"
+        content="
+            This website is made using React.js. I have a firm knowledge in 
+            building a dynamic website with React.js"
+        className="card-15"
+        animation={ReactAnim}
+      />
+      <HCard
+        title="Data Structure"
+        content="
+            As a programmer Data structure is very important to optimize the code
+            and make it more fast and reliable."
+        className="card-16"
+        animation={DSA}
+        animationWidth="100%"
+      />
+      <HCard
+        title="UI / UX"
+        content="
+            We make have many features in our application without proper UI
+            user may not able to use the feature. I love experimenting which design suits the software. "
+        className="card-17"
+        animation={UIUX}
+        animationWidth="100%"
+      />
+      <VCard
+        title="React Native"
+        content="
+            I have a firm knowledge in React Native. I can develop Android and IOS app in React
+            Native. It looks more similar React. I have developed a production software in
+            React Native"
+        className="card-18"
+        animation={ReactNative}
+      />
     </div>
   );
 };
