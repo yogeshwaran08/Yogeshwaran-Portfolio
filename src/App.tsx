@@ -25,6 +25,7 @@ function App() {
       {/* <ParticlesComponent id="particles" /> */}
       <Hero />
       <Body />
+      <Work />
       <Footer />
     </div>
   );

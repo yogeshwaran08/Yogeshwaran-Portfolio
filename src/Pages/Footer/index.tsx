@@ -4,6 +4,7 @@ import InstagramIcon from "../../assets/icons/instagram";
 import TwitterIcon from "../../assets/icons/Twitter";
 import LinkedinIcon from "../../assets/icons/linkedin";
 import EmailIcon from "../../assets/icons/Email";
+import GithubIcon from "../../assets/icons/Github";
 
 const Footer = () => {
   return (
@@ -43,16 +44,16 @@ const Footer = () => {
         </motion.a>
       </div>
       <div className="socials">
-        <a href="https://instagram.com/lydia_rvs" target="_blank">
+        <a href="https://www.github.com/yogeshwaran08" target="_blank">
+          <GithubIcon height={"21px"} width={"21px"} />
+        </a>
+        <a href="https://www.instagram.com/__kingofmortal__" target="_blank">
           <InstagramIcon height={"20px"} width={"20px"} />
         </a>
-        <a href="https://twitter.com" target="_blank">
-          <TwitterIcon height={"20px"} width={"20px"} />
-        </a>
-        <a href="https://linkedin.com/in/lydia-v" target="_blank">
+        <a href="https://www.linkedin.com/in/yogeshwaran08/" target="_blank">
           <LinkedinIcon height={"20px"} width={"20px"} />
         </a>
-        <a href="mailto:lydiarvs12@gmail.com" target="_blank">
+        <a href="mailto:yogeshwaran08083@gmail.com" target="_blank">
           <EmailIcon height={"20px"} width={"20px"} />
         </a>
       </div>
