@@ -1,26 +1,66 @@
 @import "tailwindcss";
 
+@theme {
+  --color-accent: #ff4d00;
+  --color-dark: #141314;
+  --font-sans: var(--font-outfit), ui-sans-serif, system-ui;
+  --font-mono: var(--font-mono), ui-mono-serif, monospace;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #141314;
+  --foreground: #ffffff;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-outfit);
+}
+
+.noise::after {
+  content: "";
+  position: fixed;
+  top: -200%;
+  left: -200%;
+  width: 400%;
+  height: 400%;
+  z-index: 50;
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+  opacity: 0.05;
+  pointer-events: none;
+  animation: noise 8s steps(10) infinite;
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+.pause-marquee {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes noise {
+  0% { transform: translate(0,0); }
+  10% { transform: translate(-5%,-5%); }
+  20% { transform: translate(-10%,5%); }
+  30% { transform: translate(5%,-10%); }
+  40% { transform: translate(-5%,15%); }
+  50% { transform: translate(-10%,5%); }
+  60% { transform: translate(15%,0); }
+  70% { transform: translate(0,10%); }
+  80% { transform: translate(-15%,0); }
+  90% { transform: translate(10%,5%); }
+  100% { transform: translate(5%,0); }
 }
