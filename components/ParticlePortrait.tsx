@@ -43,21 +43,25 @@ class Particle {
     ctx.fill();
   }
 
-  update(mouse: { x: number; y: number; radius: number }) {
+  update(mouse: { x: number; y: number; radius: number }): boolean {
     const dx = mouse.x - this.x;
     const dy = mouse.y - this.y;
     const distance = Math.sqrt(dx * dx + dy * dy);
 
+    let isHovered = false;
     // Color hover effect instead of displacement
     if (distance < mouse.radius + this.scatter) {
       // Glow bright yellow on hover
       this.currentColor = "rgba(255, 235, 59, 1)";
+      isHovered = true;
     } else {
       this.currentColor = this.color;
     }
 
     this.x += (this.originX - this.x) * this.ease + (this.vx *= this.friction);
     this.y += (this.originY - this.y) * this.ease + (this.vy *= this.friction);
+    
+    return isHovered;
   }
 }
 
@@ -94,15 +98,17 @@ export default function ParticlePortrait({ imageSrc }: ParticleProps) {
       let drawW, drawH, drawX, drawY;
 
       if (imgRatio > canvasRatio) {
-        drawH = displayHeight;
-        drawW = displayHeight * imgRatio;
-        drawX = (displayWidth - drawW) / 2;
-        drawY = 0;
-      } else {
+        // Image is wider than canvas
         drawW = displayWidth;
         drawH = displayWidth / imgRatio;
         drawX = 0;
         drawY = (displayHeight - drawH) / 2;
+      } else {
+        // Image is taller than canvas
+        drawH = displayHeight;
+        drawW = displayHeight * imgRatio;
+        drawX = (displayWidth - drawW) / 2;
+        drawY = 0;
       }
 
       ctx.drawImage(img, drawX, drawY, drawW, drawH);
@@ -146,6 +152,8 @@ export default function ParticlePortrait({ imageSrc }: ParticleProps) {
       animate();
     };
 
+    let isHoveringAnyParticle = false;
+
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -153,10 +161,17 @@ export default function ParticlePortrait({ imageSrc }: ParticleProps) {
       ctx.shadowColor = "#ff4d00";
       ctx.shadowBlur = 10;
 
+      let currentlyHovering = false;
       particles.forEach((p) => {
-        p.update(mouse.current);
+        const hovered = p.update(mouse.current);
+        if (hovered) currentlyHovering = true;
         p.draw(ctx);
       });
+
+      if (currentlyHovering !== isHoveringAnyParticle) {
+        isHoveringAnyParticle = currentlyHovering;
+        window.dispatchEvent(new CustomEvent("cursorImageHover", { detail: currentlyHovering }));
+      }
 
       animationFrame = requestAnimationFrame(animate);
     };
@@ -165,6 +180,11 @@ export default function ParticlePortrait({ imageSrc }: ParticleProps) {
       const rect = canvas.getBoundingClientRect();
       mouse.current.x = e.clientX - rect.left;
       mouse.current.y = e.clientY - rect.top;
+      mouse.current.radius = 16;
+    };
+
+    const handleMouseLeave = () => {
+      mouse.current.radius = 0;
     };
 
     const handleResize = () => {
@@ -172,11 +192,15 @@ export default function ParticlePortrait({ imageSrc }: ParticleProps) {
     };
 
     window.addEventListener("mousemove", handleMouseMove);
+    containerRef.current.addEventListener("mouseleave", handleMouseLeave);
     window.addEventListener("resize", handleResize);
 
     return () => {
       cancelAnimationFrame(animationFrame);
       window.removeEventListener("mousemove", handleMouseMove);
+      if (containerRef.current) {
+        containerRef.current.removeEventListener("mouseleave", handleMouseLeave);
+      }
       window.removeEventListener("resize", handleResize);
     };
   }, [imageSrc]);
@@ -184,8 +208,6 @@ export default function ParticlePortrait({ imageSrc }: ParticleProps) {
   return (
     <motion.div
       ref={containerRef}
-      onMouseEnter={() => window.dispatchEvent(new CustomEvent("cursorImageHover", { detail: true }))}
-      onMouseLeave={() => window.dispatchEvent(new CustomEvent("cursorImageHover", { detail: false }))}
       initial={{ opacity: 0 }}
       animate={{ opacity: isLoaded ? 1 : 0 }}
       transition={{ duration: 1.5 }}

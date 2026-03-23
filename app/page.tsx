@@ -12,7 +12,7 @@ export default function Home() {
   const [isHoveringImage, setIsHoveringImage] = useState(false);
   const cursorX = useMotionValue(-100);
   const cursorY = useMotionValue(-100);
-  
+
   const springConfig = { damping: 25, stiffness: 700 };
   const cursorXSpring = useSpring(cursorX, springConfig);
   const cursorYSpring = useSpring(cursorY, springConfig);
@@ -24,7 +24,8 @@ export default function Home() {
       cursorY.set(e.clientY);
     };
 
-    const handleHoverImage = (e: Event) => setIsHoveringImage((e as CustomEvent).detail);
+    const handleHoverImage = (e: Event) =>
+      setIsHoveringImage((e as CustomEvent).detail);
 
     window.addEventListener("mousemove", moveCursor);
     window.addEventListener("cursorImageHover", handleHoverImage);
@@ -39,9 +40,11 @@ export default function Home() {
   return (
     <main className="noise relative">
       {/* Custom Cursor */}
-       <motion.div
+      <motion.div
         className={`fixed top-0 left-0 w-8 h-8 rounded-full pointer-events-none z-[9999] hidden md:block transition-colors duration-200 ${
-          isHoveringImage ? "border-2 border-accent bg-transparent" : "bg-accent mix-blend-difference"
+          isHoveringImage
+            ? "border-2 border-accent bg-transparent"
+            : "bg-accent mix-blend-difference"
         }`}
         style={{
           x: cursorXSpring,
@@ -69,9 +72,15 @@ export default function Home() {
       <footer className="py-12 px-6 md:px-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm bg-dark">
         <p>© 2024 YOGESH.AI ALL RIGHTS RESERVED.</p>
         <div className="flex gap-8 mt-4 md:mt-0">
-          <a href="#" className="hover:text-accent transition-colors">LINKEDIN</a>
-          <a href="#" className="hover:text-accent transition-colors">TWITTER</a>
-          <a href="#" className="hover:text-accent transition-colors">GITHUB</a>
+          <a href="#" className="hover:text-accent transition-colors">
+            LINKEDIN
+          </a>
+          <a href="#" className="hover:text-accent transition-colors">
+            TWITTER
+          </a>
+          <a href="#" className="hover:text-accent transition-colors">
+            GITHUB
+          </a>
         </div>
       </footer>
     </main>

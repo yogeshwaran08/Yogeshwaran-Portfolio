@@ -40,13 +40,13 @@ export default function Hero() {
           <span className="w-12 h-[1px] bg-accent" /> Available for new projects
         </motion.p>
         
-        <motion.h1 variants={item} className="text-6xl md:text-8xl lg:text-9xl font-bold leading-[0.9] tracking-tighter mb-8">
-          Your AI <br />
-          <span className="text-gray-400">Engineer.</span>
+        <motion.h1 variants={item} className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[0.9] tracking-tighter mb-8">
+          Hi, I am <br />
+          <span className="text-gray-400">Yogeshwaran.</span>
         </motion.h1>
 
         <motion.p variants={item} className="text-lg md:text-xl text-gray-400 max-w-md leading-relaxed mb-12">
-          Building intelligent systems and high-performing digital experiences for the next generation of tech.
+          An AI Engineer building intelligent systems and high-performing digital experiences for the next generation of tech.
         </motion.p>
 
         <motion.div variants={item} className="flex flex-wrap items-center gap-6">
