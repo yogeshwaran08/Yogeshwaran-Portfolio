@@ -39,7 +39,41 @@ export default function Home() {
 
   return (
     <main className="noise relative">
-      {/* Custom Cursor */}
+      <motion.div
+        initial={{ "--clock-angle": "360deg" } as any}
+        animate={{ 
+          "--clock-angle": "0deg",
+          transitionEnd: { display: "none" }
+        } as any}
+        transition={{ duration: 1.2, ease: [0.76, 0, 0.24, 1], delay: 2.5 }}
+        style={{
+          maskImage: "conic-gradient(from 0deg at 50% 50%, black var(--clock-angle), transparent 0deg)",
+          WebkitMaskImage: "conic-gradient(from 0deg at 50% 50%, black var(--clock-angle), transparent 0deg)"
+        }}
+        className="fixed inset-0 z-[99999] bg-accent pointer-events-none flex flex-col items-center justify-center p-4"
+      >
+        <div className="flex gap-2">
+          <motion.div
+            animate={{ opacity: [1, 0, 1] }}
+            transition={{ duration: 1, repeat: Infinity, delay: 0 }}
+            className="w-6 h-6 bg-[#141314]"
+          />
+          <motion.div
+            animate={{ opacity: [1, 0, 1] }}
+            transition={{ duration: 1, repeat: Infinity, delay: 0.2 }}
+            className="w-6 h-6 bg-[#141314]"
+          />
+          <motion.div
+            animate={{ opacity: [1, 0, 1] }}
+            transition={{ duration: 1, repeat: Infinity, delay: 0.4 }}
+            className="w-6 h-6 bg-[#141314]"
+          />
+        </div>
+        <span className="text-[#141314] tracking-[0.3em] text-sm font-semibold mt-4">
+          LOADING
+        </span>
+      </motion.div>
+
       <motion.div
         className={`fixed top-0 left-0 w-8 h-8 rounded-full pointer-events-none z-[9999] hidden md:block transition-colors duration-200 ${
           isHoveringImage

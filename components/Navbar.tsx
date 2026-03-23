@@ -1,11 +1,9 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
-import { Menu, X, Plus } from "lucide-react";
+import { Plus } from "lucide-react";
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 px-6 py-8 md:px-12 flex justify-between items-center bg-transparent backdrop-blur-xs">
@@ -19,19 +17,21 @@ export default function Navbar() {
         </a>
       </motion.div>
 
-      <motion.button
+      <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 group"
+        className="hidden md:flex items-center gap-8"
       >
-        <span className="text-sm font-medium tracking-widest uppercase group-hover:text-accent transition-colors">
-          Menu
-        </span>
-        <div className="relative w-6 h-6 flex items-center justify-center">
-          {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-        </div>
-      </motion.button>
+        {["Home", "Projects", "Skills", "Contact"].map((item) => (
+          <a
+            key={item}
+            href={`#${item.toLowerCase()}`}
+            className="text-sm font-medium tracking-widest uppercase text-gray-400 hover:text-white transition-colors"
+          >
+            {item}
+          </a>
+        ))}
+      </motion.div>
 
       <motion.div
         initial={{ opacity: 0, x: 20 }}
