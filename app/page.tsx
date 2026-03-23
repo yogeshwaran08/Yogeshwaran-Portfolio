@@ -9,6 +9,7 @@ import ProjectsPreview from "@/components/ProjectsPreview";
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
+  const [isHoveringImage, setIsHoveringImage] = useState(false);
   const cursorX = useMotionValue(-100);
   const cursorY = useMotionValue(-100);
   
@@ -23,9 +24,13 @@ export default function Home() {
       cursorY.set(e.clientY);
     };
 
+    const handleHoverImage = (e: Event) => setIsHoveringImage((e as CustomEvent).detail);
+
     window.addEventListener("mousemove", moveCursor);
+    window.addEventListener("cursorImageHover", handleHoverImage);
     return () => {
       window.removeEventListener("mousemove", moveCursor);
+      window.removeEventListener("cursorImageHover", handleHoverImage);
     };
   }, []);
 
@@ -35,7 +40,9 @@ export default function Home() {
     <main className="noise relative">
       {/* Custom Cursor */}
        <motion.div
-        className="fixed top-0 left-0 w-8 h-8 border-2 border-accent rounded-full pointer-events-none z-[9999] hidden md:block"
+        className={`fixed top-0 left-0 w-8 h-8 rounded-full pointer-events-none z-[9999] hidden md:block transition-colors duration-200 ${
+          isHoveringImage ? "border-2 border-accent bg-transparent" : "bg-accent mix-blend-difference"
+        }`}
         style={{
           x: cursorXSpring,
           y: cursorYSpring,

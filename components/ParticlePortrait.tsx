@@ -19,6 +19,7 @@ class Particle {
   vy: number;
   friction: number;
   ease: number;
+  scatter: number;
 
   constructor(x: number, y: number, color: string, size: number) {
     this.x = x + (Math.random() - 0.5) * 20;
@@ -32,6 +33,7 @@ class Particle {
     this.vy = 0;
     this.friction = 0.94;
     this.ease = 0.08;
+    this.scatter = (Math.random() - 0.5) * 25; // Random spread for imperfect circle
   }
 
   draw(ctx: CanvasRenderingContext2D) {
@@ -47,7 +49,7 @@ class Particle {
     const distance = Math.sqrt(dx * dx + dy * dy);
 
     // Color hover effect instead of displacement
-    if (distance < mouse.radius) {
+    if (distance < mouse.radius + this.scatter) {
       // Glow bright yellow on hover
       this.currentColor = "rgba(255, 235, 59, 1)";
     } else {
@@ -182,10 +184,12 @@ export default function ParticlePortrait({ imageSrc }: ParticleProps) {
   return (
     <motion.div
       ref={containerRef}
+      onMouseEnter={() => window.dispatchEvent(new CustomEvent("cursorImageHover", { detail: true }))}
+      onMouseLeave={() => window.dispatchEvent(new CustomEvent("cursorImageHover", { detail: false }))}
       initial={{ opacity: 0 }}
       animate={{ opacity: isLoaded ? 1 : 0 }}
       transition={{ duration: 1.5 }}
-      className="w-full h-full relative"
+      className="w-full h-full relative cursor-none"
     >
       <canvas ref={canvasRef} className="w-full h-full" />
     </motion.div>
