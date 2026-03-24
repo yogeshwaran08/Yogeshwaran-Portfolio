@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 
 interface ParticleProps {
   imageSrc: string;
+  delay?: number; // Added to sync with entrance loader animations
 }
 
 class Particle {
@@ -20,38 +21,55 @@ class Particle {
   friction: number;
   ease: number;
   scatter: number;
+  targetSize: number;
+  triggerTime: number;
 
   constructor(x: number, y: number, color: string, size: number) {
-    this.x = x + (Math.random() - 0.5) * 20;
-    this.y = y + (Math.random() - 0.5) * 20;
+    // Start scattered widely and progressively draw inwards
+    const scatterAng = Math.random() * Math.PI * 2;
+    const scatterDist = 100 + Math.random() * 300;
+    this.x = x + Math.cos(scatterAng) * scatterDist;
+    this.y = y + Math.sin(scatterAng) * scatterDist;
     this.originX = x;
     this.originY = y;
     this.color = color;
     this.currentColor = color;
-    this.size = size;
+    this.size = 0; // Starts at size 0
+    this.targetSize = size;
     this.vx = 0;
     this.vy = 0;
-    this.friction = 0.94;
-    this.ease = 0.08;
-    this.scatter = (Math.random() - 0.5) * 25; // Random spread for imperfect circle
+    this.friction = 0.92;
+    this.ease = 0.06 + Math.random() * 0.08; // Faster progressive snap formation
+    this.scatter = (Math.random() - 0.5) * 25; 
+    
+    // Diagonal top-left to bottom-right staggered timeline entrance (accelerated)
+    this.triggerTime = ((x + y) / 1200) * 0.7 + Math.random() * 0.2;
   }
 
   draw(ctx: CanvasRenderingContext2D) {
+    if (this.size <= 0.1) return; // Prevent rendering specs
     ctx.fillStyle = this.currentColor;
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
     ctx.fill();
   }
 
-  update(mouse: { x: number; y: number; radius: number }): boolean {
+  update(mouse: { x: number; y: number; radius: number }, elapsed: number, globalDelay: number): boolean {
+    if (elapsed < globalDelay + this.triggerTime) {
+      return false;
+    }
+
+    // Progressively grow to target size much faster
+    if (this.size < this.targetSize) {
+      this.size += (this.targetSize - this.size) * 0.25;
+    }
+    // Mouse dispersion mechanics
     const dx = mouse.x - this.x;
     const dy = mouse.y - this.y;
     const distance = Math.sqrt(dx * dx + dy * dy);
 
     let isHovered = false;
-    // Color hover effect instead of displacement
     if (distance < mouse.radius + this.scatter) {
-      // Glow bright yellow on hover
       this.currentColor = "rgba(255, 235, 59, 1)";
       isHovered = true;
     } else {
@@ -65,7 +83,7 @@ class Particle {
   }
 }
 
-export default function ParticlePortrait({ imageSrc }: ParticleProps) {
+export default function ParticlePortrait({ imageSrc, delay = 0 }: ParticleProps) {
   const [isLoaded, setIsLoaded] = useState(false);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -149,12 +167,16 @@ export default function ParticlePortrait({ imageSrc }: ParticleProps) {
 
     img.onload = () => {
       init();
-      animate();
+      animationFrame = requestAnimationFrame(animate);
     };
 
     let isHoveringAnyParticle = false;
+    let startTime: number | null = null;
 
-    const animate = () => {
+    const animate = (timestamp: number) => {
+      if (!startTime) startTime = timestamp;
+      const elapsed = (timestamp - startTime) / 1000;
+
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       // Strong cinematic glow
@@ -163,7 +185,7 @@ export default function ParticlePortrait({ imageSrc }: ParticleProps) {
 
       let currentlyHovering = false;
       particles.forEach((p) => {
-        const hovered = p.update(mouse.current);
+        const hovered = p.update(mouse.current, elapsed, delay);
         if (hovered) currentlyHovering = true;
         p.draw(ctx);
       });

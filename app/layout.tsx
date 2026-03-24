@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Outfit, JetBrains_Mono } from "next/font/google";
+import { Outfit, JetBrains_Mono, Host_Grotesk } from "next/font/google";
 import "./globals.css";
 
 const outfit = Outfit({
@@ -9,6 +9,11 @@ const outfit = Outfit({
 
 const jetbrainsMono = JetBrains_Mono({
   variable: "--font-mono",
+  subsets: ["latin"],
+});
+
+const hostGrotesk = Host_Grotesk({
+  variable: "--font-host",
   subsets: ["latin"],
 });
 
@@ -25,7 +30,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${outfit.variable} ${jetbrainsMono.variable} antialiased`}
+      className={`${outfit.variable} ${jetbrainsMono.variable} ${hostGrotesk.variable} antialiased`}
     >
       <body className="bg-dark text-white selection:bg-[#ff4d00] selection:text-white overflow-x-hidden">
         {children}

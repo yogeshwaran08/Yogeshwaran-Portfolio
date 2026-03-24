@@ -5,6 +5,7 @@ import { motion, useMotionValue, useSpring } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import BrandStrip from "@/components/BrandStrip";
+import About from "@/components/About";
 import ProjectsPreview from "@/components/ProjectsPreview";
 
 export default function Home() {
@@ -41,14 +42,18 @@ export default function Home() {
     <main className="noise relative">
       <motion.div
         initial={{ "--clock-angle": "360deg" } as any}
-        animate={{ 
-          "--clock-angle": "0deg",
-          transitionEnd: { display: "none" }
-        } as any}
+        animate={
+          {
+            "--clock-angle": "0deg",
+            transitionEnd: { display: "none" },
+          } as any
+        }
         transition={{ duration: 1.2, ease: [0.76, 0, 0.24, 1], delay: 2.5 }}
         style={{
-          maskImage: "conic-gradient(from 0deg at 50% 50%, black var(--clock-angle), transparent 0deg)",
-          WebkitMaskImage: "conic-gradient(from 0deg at 50% 50%, black var(--clock-angle), transparent 0deg)"
+          maskImage:
+            "conic-gradient(from 0deg at 50% 50%, black var(--clock-angle), transparent 0deg)",
+          WebkitMaskImage:
+            "conic-gradient(from 0deg at 50% 50%, black var(--clock-angle), transparent 0deg)",
         }}
         className="fixed inset-0 z-[99999] bg-accent pointer-events-none flex flex-col items-center justify-center p-4"
       >
@@ -99,7 +104,8 @@ export default function Home() {
 
       <Navbar />
       <Hero />
-      <BrandStrip />
+      {/* <BrandStrip /> */}
+      <About />
       <ProjectsPreview />
 
       {/* Footer / Copyright */}

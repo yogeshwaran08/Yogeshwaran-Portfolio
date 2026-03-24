@@ -5,6 +5,7 @@
   --color-dark: #141314;
   --font-sans: var(--font-outfit), ui-sans-serif, system-ui;
   --font-mono: var(--font-mono), ui-mono-serif, monospace;
+  --font-title: var(--font-host), sans-serif;
 }
 
 :root {
@@ -39,7 +40,7 @@ body {
 .animate-marquee {
   display: flex;
   width: max-content;
-  animation: marquee 30s linear infinite;
+  animation: marquee 300s linear infinite;
 }
 
 .pause-marquee {
