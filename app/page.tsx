@@ -8,6 +8,7 @@ import BrandStrip from "@/components/BrandStrip";
 import About from "@/components/About";
 import TechnicalSkills from "@/components/TechnicalSkills";
 import ProjectsPreview from "@/components/ProjectsPreview";
+import ConstructionPopup from "@/components/ConstructionPopup";
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
@@ -125,6 +126,8 @@ export default function Home() {
           </a>
         </div>
       </footer>
+
+      <ConstructionPopup />
     </main>
   );
 }

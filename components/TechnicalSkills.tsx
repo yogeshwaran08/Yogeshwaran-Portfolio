@@ -159,9 +159,9 @@ export default function TechnicalSkills() {
     >
       <div className="absolute top-0 right-[-10%] w-[40%] h-[40%] bg-accent/5 rounded-full blur-[120px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto z-10 relative">
+      <div className="w-full z-10 relative">
         <div ref={headingRef} className="mb-16">
-          <span className="text-accent font-bold tracking-[0.2em] text-sm uppercase mb-6 block">
+          <span className="text-accent text-sm font-bold tracking-widest uppercase mb-4 block">
             Technical Skills
           </span>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-title font-medium leading-[1.1] tracking-tight text-white max-w-4xl">
