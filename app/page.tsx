@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import BrandStrip from "@/components/BrandStrip";
 import About from "@/components/About";
+import TechnicalSkills from "@/components/TechnicalSkills";
 import ProjectsPreview from "@/components/ProjectsPreview";
 
 export default function Home() {
@@ -106,6 +107,7 @@ export default function Home() {
       <Hero />
       {/* <BrandStrip /> */}
       <About />
+      <TechnicalSkills />
       <ProjectsPreview />
 
       {/* Footer / Copyright */}
